@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <title>Social Norms and Movement for Pepper - Master Presentation</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,700" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/mathjax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <style>
+        /* Fond Gris Métallique */
+        body {
+            background: linear-gradient(135deg, #e5e7eb 0%, #9ca3af 100%);
+            color: #1f2937;
+            font-family: 'Open Sans', sans-serif;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        /* Style standard des slides (Cadre Blanc Cassé) */
+        .step {
+            width: 900px; /* Réduit pour laisser de la place aux médias flottants */
+            padding: 60px;
+            background: rgba(253, 250, 246, 0.96); 
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            font-size: 30px;
+            line-height: 1.5;
+            transition: all 0.8s ease-in-out;
+            position: relative;
+        }
+
+        .step.active { opacity: 1; transform: scale(1); }
+        .step:not(.active) { opacity: 0; pointer-events: none; } 
+
+        h1, h2, h3 { 
+            font-family: 'Montserrat', sans-serif;
+            color: #111827; 
+            text-transform: uppercase; 
+            margin-bottom: 25px;
+            border-bottom: 6px solid #2563eb;
+            display: inline-block;
+        }
+
+        /* Médias Flottants (Hors Cadre) */
+        .floating-media {
+            position: absolute;
+            top: 50%;
+            right: -550px; /* Décalage vers l'extérieur droit */
+            transform: translateY(-50%);
+            width: 500px;
+            height: 350px;
+            background: #000;
+            border: 8px solid #fdfaf6; /* Rappel du blanc cassé */
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        .floating-photo {
+            right: -450px;
+            width: 400px;
+            height: auto;
+            border: 5px solid #fdfaf6;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Hero & Thanks (Sans cadre) */
+        .no-frame {
+            background: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            width: 1300px !important;
+        }
+
+        .pepper-full-img {
+            height: 95vh;
+            filter: drop-shadow(0 30px 50px rgba(0,0,0,0.3));
+        }
+
+        .page-number {
+            position: fixed; bottom: 30px; right: 40px;
+            font-weight: bold; color: #374151; font-size: 24px;
+        }
+
+        .presenter-tag {
+            position: absolute; top: -20px; right: 40px;
+            background: #111827; color: #fff;
+            padding: 5px 20px; border-radius: 8px; font-size: 20px;
+        }
+    </style>
+</head>
+
+<body class="impress-not-supported">
+
+<div id="impress" data-transition-duration="1500">
+
+    <div id="hero" class="step no-frame" data-x="0" data-y="0" data-scale="6" style="text-align:center;">
+        <img src="/home/rastate/Bureau/Pepper_Presentation/Animated_Presentation/images/SBR_Pepper-Hero_FullRobot.webp" class="pepper-full-img" alt="Pepper Hero">
+    </div>
+
+    <div id="title" class="step" data-x="0" data-y="6000" data-z="3000" data-scale="2">
+        <h1 style="font-size: 45px; border:none; text-align:center; display:block;">Social norms and movement for Pepper</h1>
+        <hr style="border: 2px solid #2563eb; width: 40%; margin: 20px auto;">
+        <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+            <div style="width: 48%;"><h3>Authors</h3><p>Nazim LABGAA<br>Mohamed Chakib LABGAA</p></div>
+            <div style="width: 48%;"><h3>Supervisors</h3><p>Madalina CROITORU<br>Ganesh GOWRISHANKAR</p></div>
+        </div>
+        <p style="text-align:center; margin-top: 40px;"><b>Jury:</b> Joao CAVALCANTI SANTOS</p>
+    </div>
+
+    <div id="summary" class="step" data-x="10000" data-y="6000" data-rotate-y="90" data-scale="2">
+        <h2>Summary</h2>
+        <ul style="list-style: none; padding: 0; font-size: 0.9em;">
+            <li style="margin-bottom: 10px; border-left: 5px solid #2563eb; padding-left: 20px;">1. Technical Constraints & Architecture</li>
+            <li style="margin-bottom: 10px; border-left: 5px solid #2563eb; padding-left: 20px;">2. Social Navigation & Gaze Logic</li>
+            <li style="margin-bottom: 10px; border-left: 5px solid #2563eb; padding-left: 20px;">3. Environmental Mapping</li>
+            <li style="margin-bottom: 10px; border-left: 5px solid #2563eb; padding-left: 20px;">4. Perception: YOLOv8 & Fusion</li>
+            <li style="margin-bottom: 10px; border-left: 5px solid #2563eb; padding-left: 20px;">5. Hearing System: VAD</li>
+            <li style="margin-bottom: 10px; border-left: 5px solid #2563eb; padding-left: 20px;">6. Cognitive Engine: LLM</li>
+            <li style="margin-bottom: 10px; border-left: 5px solid #2563eb; padding-left: 20px;">7. Dynamic Avoidance</li>
+        </ul>
+    </div>
+
+    <div id="constraints" class="step" data-x="20000" data-y="0" data-rotate-y="180" data-scale="2">
+        <span class="presenter-tag">P1 - Context</span>
+        <h2>Legacy Challenges</h2>
+        <ul>
+            <li><b>Platform:</b> Pepper (2014) - Hardware Obsolescence.</li>
+            <li><b>Computing:</b> Intel Atom & 4GB RAM.</li>
+            <li><b>Offloading:</b> Architecture distributed.</li>
+        </ul>
+        <div class="floating-media">VIDEO: CPU Latency</div>
+        <div class="page-number">1 / 11</div>
+    </div>
+
+    <div id="architecture" class="step" data-x="20000" data-y="10000" data-rotate-y="270" data-scale="2">
+        <span class="presenter-tag">P2 - System</span>
+        <h2>Modular Framework</h2>
+        <ul>
+            <li><b>Independent Nodes:</b> Decoupled control.</li>
+            <li><b>Autonomous Life:</b> Logic to disable breathing/swaying.</li>
+            <li><b>Stiffness:</b> Forced 1.0 (Rigid).</li>
+        </ul>
+        <div class="floating-media" style="background:none;"><img src="nodes_diag.png" class="floating-photo" alt="System Nodes"></div>
+        <div class="page-number">2 / 11</div>
+    </div>
+
+    <div id="proxemics" class="step" data-x="0" data-y="20000" data-rotate-x="90" data-scale="2">
+        <span class="presenter-tag">P1 - Social</span>
+        <h2>Social Approach</h2>
+        <ul>
+            <li><b>Zones:</b> Stopping at <b>0.70m</b>.</li>
+            <li><b>Safety:</b> Avoidance of intimate space.</li>
+            <li><b>Control:</b> Proportional linear speed.</li>
+        </ul>
+        <div class="floating-media">VIDEO: Social Navigation</div>
+        <div class="page-number">3 / 11</div>
+    </div>
+
+    <div id="gaze" class="step" data-x="-20000" data-y="10000" data-rotate-x="180" data-scale="2">
+        <span class="presenter-tag">P2 - Gaze</span>
+        <h2>Gaze Maintenance</h2>
+        <ul>
+            <li><b>Face Tracking:</b> Vertical offset logic.</li>
+            <li>$$y_{target} = y_{min} + 0.15 \times (y_{max} - y_{min})$$</li>
+        </ul>
+        <div class="floating-media">VIDEO: Face Tracking</div>
+        <div class="page-number">4 / 11</div>
+    </div>
+
+    <div id="scan" class="step" data-x="-20000" data-y="0" data-rotate-y="90" data-scale="2">
+        <span class="presenter-tag">P1 - Mapping</span>
+        <h2>Environmental Mapping</h2>
+        <ul>
+            <li><b>3-step Scan:</b> 1.0, 0, -1.0 rad.</li>
+            <li><b>Deduplication:</b> Angle/Distance rejection.</li>
+        </ul>
+        <div class="floating-media" style="background:none;"><img src="scan_map.png" class="floating-photo" alt="Deduplication"></div>
+        <div class="page-number">5 / 11</div>
+    </div>
+
+    <div id="search" class="step" data-x="-20000" data-y="-10000" data-rotate-y="0" data-scale="2">
+        <span class="presenter-tag">P1 - Search</span>
+        <h2>Active Search Mode</h2>
+        <ul>
+            <li><b>Rotation:</b> Base $\omega = 0.12$ rad/s.</li>
+            <li><b>Head Sweep:</b> Sinusoidal FOV maximization.</li>
+        </ul>
+        <div class="floating-media">VIDEO: Search Behavior</div>
+        <div class="page-number">6 / 11</div>
+    </div>
+
+    <div id="fusion" class="step" data-x="0" data-y="-20000" data-scale="2">
+        <span class="presenter-tag">P1 - Perception</span>
+        <h2>Sensor Fusion</h2>
+        <ul>
+            <li><b>YOLOv8 Nano:</b> Low-latency inference.</li>
+            <li><b>Depth:</b> Localized averaging window:
+                $$Z_{obj} = \frac{1}{N} \sum D(C_x+i, C_y+j)$$</li>
+        </ul>
+        <div class="page-number">7 / 11</div>
+    </div>
+
+    <div id="vad" class="step" data-x="20000" data-y="-10000" data-rotate-z="90" data-scale="2">
+        <span class="presenter-tag">P1 - Hearing</span>
+        <h2>VAD & Signal</h2>
+        <ul>
+            <li><b>RMS Energy:</b> Speech detection logic.</li>
+            <li><b>Calibration:</b> Dynamic noise floor mapping.</li>
+        </ul>
+        <div class="floating-media">VIDEO: VAD Logic</div>
+        <div class="page-number">8 / 11</div>
+    </div>
+
+    <div id="cognition" class="step" data-x="40000" data-y="0" data-scale="2">
+        <span class="presenter-tag">P2 - Brain</span>
+        <h2>Cognitive Architecture</h2>
+        <ul>
+            <li><b>Llama 3.1:</b> Implicit intent parsing.</li>
+            <li><b>Fetch Protocol:</b> Action tag <code>[FETCH: X]</code>.</li>
+        </ul>
+        <div class="page-number">9 / 11</div>
+    </div>
+
+    <div id="avoidance" class="step" data-x="40000" data-y="10000" data-rotate-y="90" data-scale="2">
+        <span class="presenter-tag">P1 - Nav</span>
+        <h2>Dynamic Avoidance</h2>
+        <ul>
+            <li><b>4 Phases:</b> Strafe, Latch, Pass, Margin.</li>
+            <li><b>Logic:</b> Laser-trigger with goal exception.</li>
+        </ul>
+        <div class="floating-media">VIDEO: Avoidance Demo</div>
+        <div class="page-number">10 / 11</div>
+    </div>
+
+    <div id="conclusion" class="step" data-x="0" data-y="0" data-z="15000" data-scale="5">
+        <h2>Conclusion</h2>
+        <p>Revitalizing legacy hardware via modern distributed AI.</p>
+        <div class="page-number">11 / 11</div>
+    </div>
+
+    <div id="thanks" class="step no-frame" data-x="20000" data-y="30000" data-z="20000" data-rotate-y="180" data-scale="4">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="width: 40%;"><img src="/home/rastate/Bureau/Pepper_Presentation/Animated_Presentation/images/Adobe Express - file.png" class="pepper-full-img" alt="Pepper Hero"></div>
+            <div style="width: 55%; text-align: right;">
+                <h2 style="font-size: 100px; border:none; margin:0;">THANK YOU</h2>
+                <p style="font-size: 50px; color:#2563eb; font-weight:bold;">Any questions?</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/impress/impress.js@master/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
