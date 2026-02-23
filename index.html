@@ -130,18 +130,7 @@
     </div>
 
     <div id="constraints" class="step" data-x="18000" data-y="0" data-rotate-y="180" data-scale="2" 
-        style="width: 900px; padding: 60px; margin-left: 900px;"> <span class="presenter-tag">P1 - Context</span>
-        <h2>Legacy Challenges</h2>
-        <ul>
-            <li><b>Platform:</b> Pepper (2014) - Hardware Obsolescence.</li>
-            <li><b>Computing:</b> Intel Atom & 4GB RAM.</li>
-            <li><b>Offloading:</b> Distributed architecture.</li>
-        </ul>
-        
-        <div class="floating-media" style="position: absolute; top: 50%; right: -1000px; transform: translateY(-50%); width: 900px; height: 600px; background: #000; border: 8px solid #fdfaf6; border-radius: 10px; box-shadow: 0 30px 60px rgba(0,0,0,0.4);"> 
-            <video width="100%" height="100%" autoplay loop muted controls style="border-radius: 5px;">
-                <source src="videos/pepper_yolo.mp4" type="video/mp4">
-            </vide   style="width: 700px; padding: 60px; margin-left: -200px;"> <span class="presenter-tag">P1 - Context</span>
+        style="width: 700px; padding: 60px; margin-left: -200px;"> <span class="presenter-tag">P1 - Context</span>
         <h2>Legacy Challenges</h2>
         <ul>
             <li><b>Platform:</b> Pepper (2014) - Hardware Obsolescence.</li>
@@ -153,11 +142,6 @@
             <video width="100%" height="100%" autoplay loop muted controls style="border-radius: 5px;">
                 <source src="videos/pepper_yolo.mp4" type="video/mp4">
             </video>
-        </div>
-        
-        <div class="page-number">1 / 11</div>
-    </div>
-o>
         </div>
         
         <div class="page-number">1 / 11</div>
@@ -230,6 +214,85 @@ o>
         </ul>
         <div class="page-number">7 / 11</div>
     </div>
+
+    <!-- PERCEPTION -->
+
+    <div id="Perception" class="step" data-x="0" data-y="-20000" data-scale="2">
+        <span class="presenter-tag">P1 - Perception</span>
+        <h2>Visualisation & perception</h2>
+        <ul>
+            <li>The term "perception" refers to the ability to perceive, or to understand, what is happening around you.</li>
+            <li>Pepper need to scan the room to visualise what is happening around him</li>
+        </ul>
+        <div class="page-number">7 / 11</div>
+    </div>
+
+    <div id="YOLO8" class="step" data-x="30000" data-y="-20000" data-rotate-z="90" data-scale="2">
+        <span class="presenter-tag">P1 - Perception</span>
+        <h2>YOLOv8</h2>
+        <p>In this application we need to detect the objects surrounded by the pepper.
+the best and the easy way to do it is using YOLOv8.</p>
+        <div class="page-number">7 / 11</div>
+    </div>
+
+    <div id="How_its_work" class="step" data-x="30000" data-y="0" data-scale="2">
+        <span class="presenter-tag">P1 - Perception</span>
+        <h2>YOLOv8</h2>
+        <p>To detect objects with YOLOv8 we need the top camera, in this model of the pepper we don’t use the stereo vision on the 2 eyes fortunately the YOLOv8 detection with just 1 camera we can do the detection.</p>
+        <div class="page-number">7 / 11</div>
+    </div>
+
+    <div id="How_its_work_on_Pepper" class="step" data-x="30000" data-y="0" data-scale="2">
+        <span class="presenter-tag">P1 - Perception</span>
+        <h2>How it’s work on Pepper</h2>
+        <p>In the first time we needed to use to detect a tray but all trays are rectangles and the environment we are in don’t help us.</p>
+        <p>so we opted for using a color in the tray.</p>
+        <p>In the end we added a color detection to detect only our tray(rectangle + red).</p>
+        <div class="floating-media" style="position: absolute; top: 50%; right: -920px; transform: translateY(-50%); width: 900px; height: 600px; background: #000; border: 8px solid #fdfaf6; border-radius: 10px; box-shadow: 0 30px 60px rgba(0,0,0,0.4);"> 
+            <video width="100%" height="100%" autoplay loop muted controls style="border-radius: 5px;">
+                <source src="videos/tray_detection_red.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="page-number">7 / 11</div>
+    </div>
+
+    <!-- END PERCEPTION --> <!-- PERCEPTION -->
+
+    <div id="Perception" class="step" data-x="0" data-y="-20000" data-scale="2">
+        <span class="presenter-tag">P1 - Perception</span>
+        <h2>Visualisation & perception</h2>
+        <ul>
+            <li>The term "perception" refers to the ability to perceive, or to understand, what is happening around you.</li>
+            <li>Pepper need to scan the room to visualise what is happening around him</li>
+        </ul>
+        <div class="page-number">7 / 11</div>
+    </div>
+
+    <div id="YOLO8" class="step" data-x="30000" data-y="-20000" data-rotate-z="90" data-scale="2">
+        <span class="presenter-tag">P1 - Perception</span>
+        <h2>YOLOv8</h2>
+        <p>In this application we need to detect the objects surrounded by the pepper.
+the best and the easy way to do it is using YOLOv8.</p>
+        <div class="page-number">7 / 11</div>
+    </div>
+
+    <div id="How_its_work" class="step" data-x="30000" data-y="0" data-scale="2">
+        <span class="presenter-tag">P1 - Perception</span>
+        <h2>YOLOv8</h2>
+        <p>To detect objects with YOLOv8 we need the top camera, in this model of the pepper we don’t use the stereo vision on the 2 eyes fortunately the YOLOv8 detection with just 1 camera we can do the detection.</p>
+        <div class="page-number">7 / 11</div>
+    </div>
+
+    <div id="How_its_work_on_Pepper" class="step" data-x="30000" data-y="0" data-scale="2">
+        <span class="presenter-tag">P1 - Perception</span>
+        <h2>How it’s work on Pepper</h2>
+        <p>In the first time we needed to use to detect a tray but all trays are rectangles and the environment we are in don’t help us.</p>
+        <p>so we opted for using a color in the tray.</p>
+        <p>In the end we added a color detection to detect only our tray(rectangle + red).</p>
+        <div class="page-number">7 / 11</div>
+    </div>
+
+    <!-- END PERCEPTION -->
 
     <div id="vad" class="step" data-x="20000" data-y="-10000" data-rotate-z="90" data-scale="2">
         <span class="presenter-tag">P1 - Hearing</span>
